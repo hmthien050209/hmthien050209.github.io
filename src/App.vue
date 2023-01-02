@@ -5,7 +5,7 @@ import Footer from './components/Footer.vue'
 
 <template>
   <div class="h-fit w-screen bg-draculaBackground text-draculaForeground overflow-hidden">
-    <div class="pt-8 max-w-4xl justify-center md:ml-auto md:mr-auto pl-4 pr-4">
+    <div class="pt-8 max-w-3xl justify-center md:ml-auto md:mr-auto pl-4 pr-4">
       <div class="h-fit">
         <img src="./assets/avatar.png" alt="My avatar"
           class="rounded-full lg:float-left float-none place-self-center md:h-32 md:w-32 h-24 w-24 mx-auto" />
@@ -16,7 +16,7 @@ import Footer from './components/Footer.vue'
           </h1>
         </div>
       </div>
-      <span class="font-medium lg:text-lg md:text-base text-sm">
+      <span class="body-text">
         I'm Hoàng Minh Thiên (you can call me David), a junior high school student in
         Viet Nam, who loves to write code in spare time.
         <br />
@@ -47,7 +47,7 @@ import Footer from './components/Footer.vue'
         </ul>
       </span>
       <br />
-      <div class="text-center lg:text-lg md:text-base text-sm font-medium">Contact me via:</div>
+      <div class="text-center body-text">Contact me via:</div>
       <div class="flex items-center justify-center">
         <SocialMediaButton url="https://github.com/davidhoang05022009" icon="fa-brands fa-github" />
         <SocialMediaButton url="https://t.me/davidhoang05022009" icon="fa-brands fa-telegram" />
