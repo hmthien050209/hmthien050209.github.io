@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply text-draculaCyan hover:text-draculaCyan hover:opacity-80;
+}
+ul {
+  @apply list-disc pl-4;
+}
+footer {
+  @apply md:pt-16 md:pb-16 pt-32 pb-4;
+}
+
+.greeting {
+  @apply text-lg md:text-xl lg:text-3xl font-semibold;
+}
