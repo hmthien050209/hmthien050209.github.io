@@ -16,6 +16,6 @@ const props = defineProps({
 
 <style scoped>
 .box {
-    @apply bg-draculaCurrentline hover:bg-draculaComment transition-opacity duration-300 text-draculaForeground md:h-16 md:w-16 h-12 w-12 rounded-xl flex items-center;
+    @apply bg-draculaCurrentline hover:bg-draculaComment transition-all duration-150 text-draculaForeground md:h-16 md:w-16 h-12 w-12 rounded-xl flex items-center;
 }
 </style>
