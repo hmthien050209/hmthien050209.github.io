@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply leading-relaxed;
+}
 a {
   @apply text-draculaCyan hover:text-draculaCyan hover:opacity-80;
 }

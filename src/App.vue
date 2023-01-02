@@ -18,7 +18,7 @@ import Footer from './components/Footer.vue'
       </div>
       <span class="font-medium lg:text-lg md:text-base text-sm">
         I'm Hoàng Minh Thiên (you can call me David), a junior high school student in
-        Viet Nam, who love to write code in my spare time.
+        Viet Nam, who loves to write code in spare time.
         <br />
         My skills:
         <ul>
