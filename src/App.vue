@@ -7,7 +7,7 @@ import Footer from './components/Footer.vue'
   <div class="h-fit w-screen bg-draculaBackground text-draculaForeground overflow-hidden">
     <div class="pt-8 max-w-3xl justify-center md:ml-auto md:mr-auto pl-4 pr-4">
       <div class="h-fit">
-        <img src="./assets/avatar.png" alt="My avatar"
+        <img src="./assets/avatar.webp" alt="My avatar"
           class="rounded-full lg:float-left float-none place-self-center md:h-32 md:w-32 h-24 w-24 mx-auto" />
         <div class="place-content-center lg:pl-36 lg:pr-36 lg:text-start md:pt-8 md:pb-8 text-center pt-4 pb-4">
           <h1 class="greeting">Hi there!</h1>
