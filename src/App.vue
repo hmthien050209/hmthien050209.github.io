@@ -4,7 +4,7 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <div class="h-fit w-screen bg-draculaBackground text-draculaForeground overflow-hidden">
+  <div class="h-fit w-full bg-draculaBackground text-draculaForeground overflow-hidden">
     <div class="pt-8 max-w-3xl justify-center md:ml-auto md:mr-auto pl-4 pr-4">
       <div class="h-fit">
         <img src="./assets/avatar.webp" alt="My avatar"
