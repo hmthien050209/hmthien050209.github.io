@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "prettier src/ --write"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
@@ -15,13 +16,15 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.6",
-    "vue": "^3.4.15"
+    "vue": "^3.4.21"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.6.2",
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.33",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
     "postcss-import": "^15.1.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1",
     "typescript": "^4.9.5",
     "vite": "^4.5.2",

@@ -12,13 +12,13 @@ ul {
   @apply list-disc pl-4;
 }
 footer {
-  @apply md:pt-16 md:pb-16 pt-32 pb-4;
+  @apply pb-4 pt-32 md:pb-16 md:pt-16;
 }
 
 .greeting {
-  @apply text-lg md:text-xl lg:text-3xl font-semibold;
+  @apply text-lg font-semibold md:text-xl lg:text-3xl;
 }
 
 .body-text {
-  @apply font-medium lg:text-lg md:text-base text-sm;
+  @apply text-sm font-medium md:text-base lg:text-lg;
 }

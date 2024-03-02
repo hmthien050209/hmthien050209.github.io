@@ -1,23 +1,33 @@
 <template>
-    <a :href="props.url" class="p-2">
-        <div class="box">
-            <font-awesome-icon :icon="props.icon" class="md:h-12 md:w-12 h-8 w-8 mx-auto items-center">
-            </font-awesome-icon>
-        </div>
-    </a>
+  <a :href="props.url" class="group p-2">
+    <div class="box">
+      <font-awesome-icon
+        :icon="props.icon"
+        class="mx-auto h-8 w-8 items-center p-2 md:h-12 md:w-12"
+      >
+      </font-awesome-icon>
+      <div class="site-name">
+        {{ props.site }}
+      </div>
+    </div>
+  </a>
 </template>
 
 <script setup lang="ts">
 const props = defineProps({
-    url: { type: String, required: true },
-    icon: { type: String, required: true },
-})
+  site: { type: String, required: true },
+  url: { type: String, required: true },
+  icon: { type: String, required: true },
+});
 </script>
 
 <style scoped>
 .box {
-    @apply bg-draculaCurrentline hover:opacity-90 transition-all duration-150 
-        text-draculaForeground md:h-16 md:w-16 h-12 w-12 rounded-xl flex items-center
-        shadow-sm;
+  @apply flex h-12 w-12 items-center 
+        rounded-xl bg-draculaCurrentline text-draculaForeground shadow-sm transition-all duration-1000 group-hover:w-auto group-hover:opacity-90
+        md:h-16 md:w-16;
+}
+.site-name {
+  @apply mx-2 hidden transition-all duration-1000 group-hover:block;
 }
 </style>
