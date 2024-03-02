@@ -38,7 +38,7 @@ import Footer from "./components/Footer.vue";
     <div class="flex items-center justify-center">
       <SocialMediaButton
         site="Github"
-        url="https://github.com/davidhoang05022009"
+        url="https://github.com/hmthien05022009"
         icon="fa-brands fa-github"
       />
       <SocialMediaButton
