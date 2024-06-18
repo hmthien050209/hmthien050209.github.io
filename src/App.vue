@@ -41,7 +41,7 @@ import Footer from "./components/Footer.vue";
           <a href="https://github.com/hmthien050209/fedora-post-install-script"
             >fedora-post-install-script</a
           >: My post-install scripts which I use for my Fedora Linux
-          installations on my machines (not updated in a while ;-;)
+          installations on my machines (not updated for a while ;-;)
         </li>
         <li>
           Quiz game for my presentations at school, developed using VueJS +
