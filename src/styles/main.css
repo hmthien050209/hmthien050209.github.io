@@ -1,0 +1,106 @@
+@import "./fonts.css";
+@import "./theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[--background-color] leading-relaxed text-[--text-color] dark:bg-[--dark-background-color] dark:text-[--dark-text-color];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div,
+  button,
+  a {
+    @apply font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote {
+    @apply font-serif;
+  }
+
+  code,
+  pre {
+    @apply font-mono;
+  }
+
+  h6 {
+    @apply text-base italic;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  button {
+    @apply m-[--spacing] rounded-[--border-radius] bg-[--accent-color] p-[--spacing] text-[--accent-text-color];
+  }
+
+  a {
+    @apply text-[--anchor-color] hover:text-[--anchor-hover-color] hover:underline dark:text-[--dark-anchor-color] dark:hover:text-[--dark-anchor-hover-color];
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  ul,
+  ol {
+    @apply pl-4;
+  }
+
+  main {
+    @apply m-[--spacing] p-[--spacing];
+  }
+
+  .success {
+    @apply bg-[--success-color] dark:bg-[--dark-success-color];
+  }
+
+  .warning {
+    @apply bg-[--warning-color] dark:bg-[--dark-warning-color];
+  }
+
+  .danger {
+    @apply bg-[--danger-color] dark:bg-[--dark-danger-color];
+  }
+
+  .neutral {
+    @apply bg-[--neutral-color] text-black dark:bg-[--dark-neutral-color] dark:text-white;
+  }
+}

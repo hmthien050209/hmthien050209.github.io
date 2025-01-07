@@ -1,0 +1,29 @@
+:root {
+  /* Spacing related*/
+  --border-radius: theme(borderRadius.DEFAULT);
+  --spacing: theme(spacing.2);
+
+  /* Main accent color */
+  --accent-color: theme(colors.blue.500);
+  --accent-text-color: theme(colors.gray.100);
+
+  /* Default theme */
+  --background-color: theme(colors.white);
+  --text-color: theme(colors.black);
+  --anchor-color: theme(colors.blue.800);
+  --anchor-color-hover: theme(colors.blue.900);
+  --success-color: theme(colors.green.700);
+  --warning-color: theme(colors.orange.500);
+  --danger-color: theme(colors.red.600);
+  --neutral-color: theme(colors.neutral.300);
+
+  /* Dark theme */
+  --dark-background-color: theme(colors.stone.800);
+  --dark-text-color: theme(colors.stone.100);
+  --dark-anchor-color: theme(colors.blue.500);
+  --dark-anchor-color-hover: theme(colors.blue.600);
+  --dark-success-color: theme(colors.emerald.700);
+  --dark-warning-color: theme(colors.orange.600);
+  --dark-danger-color: theme(colors.red.600);
+  --dark-neutral-color: theme(colors.neutral.500);
+}
