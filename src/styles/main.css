@@ -5,102 +5,105 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-[--background-color] leading-relaxed text-[--text-color] dark:bg-[--dark-background-color] dark:text-[--dark-text-color];
-  }
+body {
+  @apply bg-[--background-color] leading-relaxed text-[--text-color] dark:bg-[--dark-background-color] dark:text-[--dark-text-color];
+  @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span,
-  div,
-  button,
-  a {
-    @apply font-sans;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+button,
+a {
+  @apply font-sans;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  blockquote {
-    @apply font-serif;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+  @apply font-serif;
+}
 
-  code,
-  pre {
-    @apply font-mono;
-  }
+code,
+pre {
+  @apply font-mono;
+}
 
-  h6 {
-    @apply text-base italic;
-  }
+h6 {
+  @apply text-base italic;
+}
 
-  h5 {
-    @apply text-lg;
-  }
+h5 {
+  @apply text-lg;
+}
 
-  h4 {
-    @apply text-xl;
-  }
+h4 {
+  @apply text-xl;
+}
 
-  h3 {
-    @apply text-2xl;
-  }
+h3 {
+  @apply text-2xl;
+}
 
-  h2 {
-    @apply text-3xl;
-  }
+h2 {
+  @apply text-3xl;
+}
 
-  h1 {
-    @apply text-4xl;
-  }
+h1 {
+  @apply text-4xl;
+}
 
-  button {
-    @apply m-[--spacing] rounded-[--border-radius] bg-[--accent-color] p-[--spacing] text-[--accent-text-color];
-  }
+button {
+  @apply m-[--spacing] rounded-[--border-radius] bg-[--accent-color] p-[--spacing] text-[--accent-text-color] hover:brightness-90;
+}
 
-  a {
-    @apply text-[--anchor-color] hover:text-[--anchor-hover-color] hover:underline dark:text-[--dark-anchor-color] dark:hover:text-[--dark-anchor-hover-color];
-  }
+a {
+  @apply text-[--anchor-color] hover:text-[--anchor-hover-color] hover:underline dark:text-[--dark-anchor-color] dark:hover:text-[--dark-anchor-hover-color];
+}
 
-  ul {
-    @apply list-disc;
-  }
+ul {
+  @apply list-disc;
+}
 
-  ol {
-    @apply list-decimal;
-  }
+ol {
+  @apply list-decimal;
+}
 
-  ul,
-  ol {
-    @apply pl-4;
-  }
+ul,
+ol {
+  @apply pl-4;
+}
 
-  main {
-    @apply m-[--spacing] p-[--spacing];
-  }
+main {
+  @apply mx-auto w-full p-[--spacing] md:w-2/3 lg:w-1/2;
+}
 
-  .success {
-    @apply bg-[--success-color] dark:bg-[--dark-success-color];
-  }
+.success {
+  @apply bg-[--success-color] dark:bg-[--dark-success-color];
+}
 
-  .warning {
-    @apply bg-[--warning-color] dark:bg-[--dark-warning-color];
-  }
+.warning {
+  @apply bg-[--warning-color] dark:bg-[--dark-warning-color];
+}
 
-  .danger {
-    @apply bg-[--danger-color] dark:bg-[--dark-danger-color];
-  }
+.danger {
+  @apply bg-[--danger-color] dark:bg-[--dark-danger-color];
+}
 
-  .neutral {
-    @apply bg-[--neutral-color] text-black dark:bg-[--dark-neutral-color] dark:text-white;
-  }
+.neutral {
+  @apply bg-[--neutral-color] text-black dark:bg-[--dark-neutral-color] dark:text-white;
+}
+
+.subtle {
+  @apply bg-[--background-color] text-[--text-color] dark:bg-[--dark-background-color] dark:text-[--dark-text-color] dark:hover:brightness-50;
 }

@@ -8,6 +8,8 @@ import rehypeToc from "rehype-toc";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), vue()],
+  site: "https://hmthien050209.github.io/",
+  prefetch: true,
   rehypePlugins: [
     rehypeAccessibleEmojis,
     [rehypeShiki, { theme: "dracula" }],

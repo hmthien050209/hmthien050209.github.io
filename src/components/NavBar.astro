@@ -1,5 +1,36 @@
 ---
-import ThemeButton from "./ThemeButton.astro";
+import ThemeButton from "./ThemeButton.vue";
 ---
 
-<ThemeButton />
+<nav class="flex h-auto w-screen grid-rows-2 border border-white p-[--spacing]">
+  <div class="flex flex-grow flex-row items-center">
+    <a href="/">hmthien050209's website</a>
+    <a
+      href="/about"
+      data-astro-prefetch
+      >About</a
+    >
+    <a
+      href="/contact"
+      data-astro-prefetch
+      >Contact</a
+    >
+    <a
+      href="/projects"
+      data-astro-prefetch
+      >Projects</a
+    >
+    <a
+      href="/blogs"
+      data-astro-prefetch
+      >Blogs</a
+    >
+  </div>
+  <ThemeButton client:only="vue" />
+</nav>
+
+<style>
+  a {
+    @apply text-inherit hover:text-inherit hover:no-underline dark:text-inherit dark:hover:text-inherit;
+  }
+</style>

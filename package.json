@@ -23,6 +23,11 @@
     "@fontsource-variable/jetbrains-mono": "^5.1.2",
     "@fontsource-variable/noto-serif": "^5.1.1",
     "@fontsource-variable/roboto-flex": "^5.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@vueuse/core": "^12.3.0",
     "astro": "^5.1.2",
     "tailwindcss": "^3.4.17",
     "vue": "^3.5.13"
