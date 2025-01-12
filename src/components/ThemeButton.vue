@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-  import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
-  import {faSun, faMoon} from "@fortawesome/free-solid-svg-icons";
+  import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+  import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
   import { useStorage } from "@vueuse/core";
   import { onMounted, watchEffect } from "vue";
 
@@ -17,8 +17,8 @@
   onMounted(() => {
     watchEffect(() => {
       applyTheme(isDarkMode.value);
-    })
-  })
+    });
+  });
 
   function toggleTheme() {
     isDarkMode.value = !isDarkMode.value;
@@ -26,8 +26,25 @@
 </script>
 
 <template>
-  <button @click="toggleTheme()" class="h-10 w-10 flex items-center justify-center subtle">
-    <FontAwesomeIcon :icon="faSun" v-if="!isDarkMode" class="h-full w-full"/>
-    <FontAwesomeIcon :icon="faMoon" v-else class="h-full w-full"/>
+  <button
+    class="subtle flex h-8 w-8 items-center justify-center"
+    @click="toggleTheme()"
+  >
+    <FontAwesomeIcon
+      v-show="!isDarkMode"
+      :icon="faSun"
+      class="h-full w-full"
+    />
+    <FontAwesomeIcon
+      v-show="isDarkMode"
+      :icon="faMoon"
+      class="h-full w-full"
+    />
   </button>
 </template>
+
+<style scoped>
+  * {
+    @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out;
+  }
+</style>

@@ -6,8 +6,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[--background-color] leading-relaxed text-[--text-color] dark:bg-[--dark-background-color] dark:text-[--dark-text-color];
+  @apply bg-[--background-color] text-[--text-color] dark:bg-[--dark-background-color] dark:text-[--dark-text-color];
   @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out;
+  @apply overflow-x-clip;
 }
 
 h1,
@@ -61,6 +62,7 @@ h2 {
 
 h1 {
   @apply text-4xl;
+  @apply mb-[--spacing] mt-[calc(var(--spacing)*2)] border-b border-b-[inherit];
 }
 
 button {
@@ -85,7 +87,23 @@ ol {
 }
 
 main {
-  @apply mx-auto w-full p-[--spacing] md:w-2/3 lg:w-1/2;
+  @apply mx-[--spacing] w-full p-[calc(var(--spacing)/2)] md:mx-auto md:w-2/3 lg:w-1/2;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  blockquote {
+    @apply text-wrap leading-relaxed;
+  }
+}
+
+blockquote {
+  @apply border-l-4 bg-[--background-blockquote-color] pl-[--spacing] italic dark:bg-[--dark-background-blockquote-color];
 }
 
 .success {
@@ -105,5 +123,5 @@ main {
 }
 
 .subtle {
-  @apply bg-[--background-color] text-[--text-color] dark:bg-[--dark-background-color] dark:text-[--dark-text-color] dark:hover:brightness-50;
+  @apply bg-[--background-color] text-[--text-color] hover:bg-[--background-hover-color] dark:bg-[--dark-background-color] dark:text-[--dark-text-color] dark:hover:bg-[--dark-background-hover-color];
 }

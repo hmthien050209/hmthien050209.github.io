@@ -2,7 +2,8 @@
 
 My personal blog website
 
-Built with [Astro](https://astro.build) and [TailwindCSS](https://tailwindcss.com)
+Built with [Astro](https://astro.build), [Vue](https://vuejs.org) and
+[TailwindCSS](https://tailwindcss.com)
 
 ## How to run?
 

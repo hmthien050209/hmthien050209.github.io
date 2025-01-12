@@ -3,16 +3,20 @@ import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import rehypeShiki from "@shikijs/rehype";
-import rehypeToc from "rehype-toc";
+import remarkToc from "remark-toc";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), vue()],
   site: "https://hmthien050209.github.io/",
   prefetch: true,
-  rehypePlugins: [
-    rehypeAccessibleEmojis,
-    [rehypeShiki, { theme: "dracula" }],
-    rehypeToc,
-  ],
+  markdown: {
+    remarkPlugins: [
+      [remarkToc, { heading: "Contents", ordered: true, tight: false }],
+    ],
+    rehypePlugins: [
+      rehypeAccessibleEmojis,
+      [rehypeShiki, { theme: "dracula" }],
+    ],
+  },
 });

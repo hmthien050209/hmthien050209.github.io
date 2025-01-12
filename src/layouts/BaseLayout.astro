@@ -1,5 +1,5 @@
 ---
-import NavBar from "../components/NavBar.astro";
+import NavBar from "../components/NavBar/NavBar.astro";
 import Footer from "../components/Footer.astro";
 
 import "../styles/main.css";
@@ -7,18 +7,18 @@ import BaseHead from "../components/BaseHead.astro";
 
 interface Props {
   title?: string;
-  description: string;
-  heroUrl: string;
+  description?: string;
+  imageName?: string;
 }
 
-const { title = "Home", description, heroUrl } = Astro.props;
+const { title = "Home", description, imageName } = Astro.props;
 ---
 
 <html lang="en">
   <BaseHead
     title={title}
     description={description}
-    heroUrl={heroUrl}
+    imageName={imageName}
   />
   <NavBar />
   <body>

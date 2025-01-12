@@ -9,6 +9,8 @@
 
   /* Default theme */
   --background-color: theme(colors.white);
+  --background-hover-color: theme(colors.neutral.200);
+  --background-blockquote-color: theme(colors.neutral.100);
   --text-color: theme(colors.black);
   --anchor-color: theme(colors.blue.600);
   --anchor-hover-color: theme(colors.blue.700);
@@ -19,6 +21,8 @@
 
   /* Dark theme */
   --dark-background-color: theme(colors.stone.800);
+  --dark-background-hover-color: theme(colors.stone.600);
+  --dark-background-blockquote-color: theme(colors.stone.700);
   --dark-text-color: theme(colors.stone.100);
   --dark-anchor-color: theme(colors.blue.500);
   --dark-anchor-hover-color: theme(colors.blue.600);

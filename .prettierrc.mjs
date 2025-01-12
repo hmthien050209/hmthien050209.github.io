@@ -1,10 +1,8 @@
 /** @type {import("prettier").Config} */
 export default {
-  endOfLine: "lf",
-  printWidth: 80,
-  tabWidth: 2,
   vueIndentScriptAndStyle: true,
   singleAttributePerLine: true,
+  semi: true,
   plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   overrides: [
     {
