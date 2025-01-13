@@ -1,5 +1,6 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
 ---
 
 <BaseLayout title="Test page">
@@ -47,4 +48,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <li>test</li>
     </ol>
   </ol>
+
+  <Image
+    src={import('../assets/default-image.png')}
+    alt="Test image"
+  />
 </BaseLayout>

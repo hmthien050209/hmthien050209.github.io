@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-  import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-  import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-  import { useStorage } from "@vueuse/core";
-  import { onMounted, watchEffect } from "vue";
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+  import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+  import { useStorage } from '@vueuse/core';
+  import { onMounted, watchEffect } from 'vue';
 
   function applyTheme(newIsDarkMode: boolean) {
     if (newIsDarkMode) {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove('dark');
     }
   }
 
-  const isDarkMode = useStorage<boolean>("isDarkMode", false);
+  const isDarkMode = useStorage<boolean>('isDarkMode', false);
 
   onMounted(() => {
     watchEffect(() => {

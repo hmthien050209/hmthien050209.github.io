@@ -3,12 +3,13 @@ export default {
   vueIndentScriptAndStyle: true,
   singleAttributePerLine: true,
   semi: true,
-  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  singleQuote: true,
+  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
   overrides: [
     {
-      files: "*.astro",
+      files: '*.astro',
       options: {
-        parser: "astro",
+        parser: 'astro',
       },
     },
   ],

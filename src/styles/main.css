@@ -1,5 +1,5 @@
-@import "./fonts.css";
-@import "./theme.css";
+@import './fonts.css';
+@import './theme.css';
 
 @tailwind base;
 @tailwind components;
@@ -87,7 +87,7 @@ ol {
 }
 
 main {
-  @apply mx-[--spacing] w-full p-[calc(var(--spacing)/2)] md:mx-auto md:w-2/3 lg:w-1/2;
+  @apply mx-auto w-full p-[calc(var(--spacing)/2)];
 
   h1,
   h2,
@@ -100,6 +100,10 @@ main {
   blockquote {
     @apply text-wrap leading-relaxed;
   }
+}
+
+main.text-primary {
+  @apply md:w-2/3 lg:w-1/2;
 }
 
 blockquote {
@@ -124,4 +128,8 @@ blockquote {
 
 .subtle {
   @apply bg-[--background-color] text-[--text-color] hover:bg-[--background-hover-color] dark:bg-[--dark-background-color] dark:text-[--dark-text-color] dark:hover:bg-[--dark-background-hover-color];
+}
+
+img {
+  @apply m-[--spacing] aspect-auto w-full rounded-[--border-radius];
 }

@@ -9,6 +9,7 @@
 
   /* Default theme */
   --background-color: theme(colors.white);
+  --sub-color: theme(colors.neutral.100);
   --background-hover-color: theme(colors.neutral.200);
   --background-blockquote-color: theme(colors.neutral.100);
   --text-color: theme(colors.black);
@@ -21,6 +22,7 @@
 
   /* Dark theme */
   --dark-background-color: theme(colors.stone.800);
+  --dark-sub-color: theme(colors.stone.900);
   --dark-background-hover-color: theme(colors.stone.600);
   --dark-background-blockquote-color: theme(colors.stone.700);
   --dark-text-color: theme(colors.stone.100);

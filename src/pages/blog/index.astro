@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/Blogs/PostCard.astro';
+import CardsContainer from '../../components/Blogs/CardsContainer.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+---
+
+<BaseLayout
+  title="Blogs"
+  isTextPrimary={false}
+>
+  <h1>My blogs</h1>
+  <p>
+    Here are my blogs that I wrote in my spare time. Don't take them too
+    seriously :)
+  </p>
+  <CardsContainer>
+    {
+      posts.map(
+        (post: {
+          id: string;
+          body?: string;
+          data: {
+            title?: string;
+            description?: string;
+            imageName?: string;
+            date?: Date;
+          };
+        }) => (
+          <PostCard
+            title={post.data.title}
+            description={post.data.description}
+            imageName={post.data.imageName || 'default-image.png'}
+            date={post.data.date}
+            url={`/blog/${post.id}`}
+          />
+        ),
+      )
+    }
+  </CardsContainer>
+</BaseLayout>

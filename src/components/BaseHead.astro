@@ -6,9 +6,9 @@ interface Props {
 }
 
 const {
-  title = "Home",
+  title = 'Home',
   description = "This page doesn't have a description",
-  imageName = "default-image.webp",
+  imageName = 'default-image.webp',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -94,21 +94,21 @@ const formattedTitle = `${title} | hmthien050209's website`;
   <script is:inline>
     const isDarkTheme = (() => {
       if (
-        typeof localStorage !== "undefined" &&
-        localStorage.getItem("isDarkMode")
+        typeof localStorage !== 'undefined' &&
+        localStorage.getItem('isDarkMode')
       ) {
-        return localStorage.getItem("isDarkMode");
+        return localStorage.getItem('isDarkMode');
       }
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         return true;
       }
       return false;
     })();
 
-    if (isDarkTheme === "true") {
-      document.documentElement.classList.add("dark");
+    if (isDarkTheme === 'true') {
+      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove('dark');
     }
   </script>
 </head>
