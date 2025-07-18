@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/BaseContentLayout.astro
 title: My contact information
+description: "Hoàng Minh Thiên's contact information, where you can find me on various platforms."
 ---
 
 ## Facebook

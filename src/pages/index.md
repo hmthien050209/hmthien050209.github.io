@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/BaseContentLayout.astro
 title: Home
+description: "Hoàng Minh Thiên's personal website, where I share my knowledge and experiences in programming and technology."
 ---
 
 > If you want a shorter, more professional version of this page, check out my
