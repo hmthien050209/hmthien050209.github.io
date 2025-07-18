@@ -43,7 +43,7 @@ if (imageName) {
     <p class="line-clamp-2">{description}</p>
   </div>
   <div class="post-date">
-    <p class="my-0">{date.toLocaleDateString()}</p>
+    <p class="my-0">{date.toDateString()}</p>
   </div>
 </a>
 
@@ -51,13 +51,13 @@ if (imageName) {
   @reference '@styles/main.css';
   a {
     all: unset;
-    @apply block flex h-80 flex-col items-center justify-center w-72;
+    @apply block flex h-80 w-72 flex-col items-center justify-center;
     @apply relative rounded-(--radius-xl) bg-(--sub-color) p-2 hover:cursor-pointer hover:bg-(--background-hover-color) hover:text-inherit hover:no-underline dark:bg-(--dark-sub-color) dark:hover:bg-(--dark-background-hover-color) dark:hover:text-inherit;
     @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out motion-safe:hover:scale-105;
   }
 
   img {
-    @apply h-1/2 w-auto object-cover rounded-[calc(var(--radius-xl)_-_var(--spacing)_*_2)];
+    @apply h-1/2 w-auto rounded-[calc(var(--radius-xl)_-_var(--spacing)_*_2)] object-cover;
   }
 
   .post-details,

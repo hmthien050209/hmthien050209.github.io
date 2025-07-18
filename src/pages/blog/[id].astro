@@ -33,7 +33,7 @@ const { Content } = await render(post);
 >
   <h1>{post.data.title}</h1>
   <p>
-    Posted on {post.data.date.toLocaleDateString()}
+    Posted on {post.data.date.toDateString()}
   </p>
   <Content />
 </BaseLayout>
