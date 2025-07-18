@@ -1,5 +1,5 @@
 {
-  "*.{js,ts,mjs,mts,cjs,html,astro}": [
+  "*.{js,ts,mjs,mts,cjs,html,astro,vue}": [
     "eslint --fix",
     "prettier --write --cache"
   ],
