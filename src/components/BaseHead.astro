@@ -99,10 +99,7 @@ const formattedTitle = `${title} | hmthien050209's website`;
       ) {
         return localStorage.getItem('isDarkMode');
       }
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return true;
-      }
-      return false;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
     })();
 
     if (isDarkTheme === 'true') {

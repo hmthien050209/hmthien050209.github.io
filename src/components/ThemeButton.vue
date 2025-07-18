@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
   import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
-  import { useStorage } from '@vueuse/core';
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
   import { onMounted, watchEffect } from 'vue';
+  import { useStorage } from '@vueuse/core';
 
   function applyTheme(newIsDarkMode: boolean) {
     if (newIsDarkMode) {

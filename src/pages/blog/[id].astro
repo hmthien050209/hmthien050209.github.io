@@ -1,10 +1,11 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { BlogSchemaType } from '../../content.config';
+import type { BlogSchemaType } from '../../content.config';
 
 interface PostType {
   id: string;
+  collection: 'blog';
   data: BlogSchemaType;
 }
 
@@ -26,9 +27,13 @@ const { Content } = await render(post);
 
 <BaseLayout
   title={post.data.title}
-  description={post.data.description}
-  imageName={post.data.imageName}
-  isTextPrimary
+  description={typeof post.data.description === 'string'
+    ? post.data.description
+    : undefined}
+  imageName={typeof post.data.imageName === 'string'
+    ? post.data.imageName
+    : undefined}
+  isTextPrimary={true}
 >
   <Content />
 </BaseLayout>
