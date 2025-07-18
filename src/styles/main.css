@@ -23,11 +23,11 @@
   --accent-text-color: var(--color-gray-100);
 
   /* Default theme */
-  --background-color: var(--color-white);
-  --sub-color: var(--color-neutral-100);
-  --background-hover-color: var(--color-neutral-200);
-  --background-blockquote-color: var(--color-neutral-100);
-  --text-color: var(--color-black);
+  --background-color: var(--color-stone-100);
+  --sub-color: var(--color-stone-200);
+  --background-hover-color: var(--color-stone-300);
+  --background-blockquote-color: var(--color-stone-200);
+  --text-color: var(--color-stone-900);
   --anchor-color: var(--color-blue-600);
   --anchor-hover-color: var(--color-blue-700);
   --success-color: var(--color-green-700);
@@ -41,8 +41,8 @@
   --dark-background-hover-color: var(--color-stone-600);
   --dark-background-blockquote-color: var(--color-stone-700);
   --dark-text-color: var(--color-stone-100);
-  --dark-anchor-color: var(--color-blue-500);
-  --dark-anchor-hover-color: var(--color-blue-600);
+  --dark-anchor-color: var(--color-blue-400);
+  --dark-anchor-hover-color: var(--color-blue-300);
   --dark-success-color: var(--color-emerald-700);
   --dark-warning-color: var(--color-orange-600);
   --dark-danger-color: var(--color-red-600);
