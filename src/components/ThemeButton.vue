@@ -28,6 +28,7 @@
 <template>
   <button
     class="subtle flex h-8 w-8 items-center justify-center"
+    aria-label="Toggle theme"
     @click="toggleTheme()"
   >
     <FontAwesomeIcon
