@@ -1,0 +1,75 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  imageName?: string;
+  date: Date;
+  url: string;
+}
+
+const { title, description, imageName, url, date } = Astro.props;
+
+const images = import.meta.glob<{
+  default: ImageMetadata;
+}>('/src/assets/*.{jpeg,jpg,png,webp,svg,gif}');
+const relativeImagePath = `/src/assets/${imageName}`;
+
+if (imageName) {
+  if (!images[relativeImagePath]) {
+    throw new Error(
+      `${relativeImagePath} does not exist in glob "/src/assets/*.{jpeg,jpg,png,webp,svg,gif}"`,
+    );
+  }
+}
+---
+
+<a
+  href={url}
+  data-astro-prefetch
+>
+  {
+    imageName && (
+      <Image
+        src={images[relativeImagePath]!()}
+        alt={`Hero image for post ${title}`}
+      />
+    )
+  }
+  <div class="post-details">
+    <h3>{title}</h3>
+    <p class="line-clamp-2">{description}</p>
+  </div>
+  <div class="post-date">
+    <p>{date.toLocaleDateString()}</p>
+  </div>
+</a>
+
+<style>
+  @reference '@styles/main.css';
+  a {
+    all: unset;
+    @apply block flex h-80 w-auto flex-col items-center justify-center md:w-80;
+    @apply relative rounded-(--radius-xl) bg-(--sub-color) p-1 hover:cursor-pointer hover:bg-(--background-hover-color) hover:text-inherit hover:no-underline md:p-2 dark:bg-(--dark-sub-color) dark:hover:bg-(--dark-background-hover-color) dark:hover:text-inherit;
+    @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out motion-safe:hover:scale-105;
+  }
+
+  img {
+    @apply max-h-1/2 rounded-[calc(var(--radius-xl)_-_var(--spacing)_*_1)] object-cover md:rounded-[calc(var(--radius-xl)_-_var(--spacing)_*_2)];
+  }
+
+  .post-details,
+  .post-date {
+    @apply w-full;
+  }
+
+  .post-details {
+    @apply h-full;
+  }
+
+  .post-date {
+    @apply h-16;
+  }
+</style>

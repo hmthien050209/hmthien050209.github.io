@@ -1,0 +1,37 @@
+---
+import ThemeButton from '../ThemeButton.vue';
+import NavBarLink from './NavBarLink.astro';
+---
+
+<nav class="flex h-auto max-w-screen grid-rows-2 items-center md:h-16 md:px-2">
+  <div class="flex w-full flex-col items-center md:flex-row">
+    <div
+      class="flex w-full flex-row items-center justify-center md:w-56 md:justify-start"
+    >
+      <NavBarLink href="/">hmthien050209's website</NavBarLink>
+    </div>
+    <div
+      class="flex grow flex-row items-center justify-center md:justify-start"
+    >
+      <NavBarLink
+        href="/contact"
+        data-astro-prefetch
+        >Contact
+      </NavBarLink>
+      <NavBarLink
+        href="/blog"
+        data-astro-prefetch
+        >Blogs
+      </NavBarLink>
+      <NavBarLink
+        href="/resume.pdf"
+        data-astro-prefetch
+        >Résumé</NavBarLink
+      >
+      <!-- To prevent layout shifts-->
+      <div class="flex h-12 w-12 grow items-center justify-end">
+        <ThemeButton client:only="vue" />
+      </div>
+    </div>
+  </div>
+</nav>

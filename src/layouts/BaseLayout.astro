@@ -1,0 +1,35 @@
+---
+import NavBar from '../components/NavBar/NavBar.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/main.css';
+import BaseHead from '../components/BaseHead.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  imageName?: string;
+  isTextPrimary?: boolean;
+}
+
+const {
+  title = 'Home',
+  description,
+  imageName,
+  isTextPrimary = true,
+} = Astro.props;
+---
+
+<html lang="en">
+  <BaseHead
+    title={title}
+    description={description}
+    imageName={imageName}
+  />
+  <NavBar />
+  <body>
+    <main class={isTextPrimary ? 'text-primary' : ''}>
+      <slot />
+    </main>
+  </body><Footer />
+</html>

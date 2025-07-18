@@ -1,0 +1,194 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource-variable/lora';
+@import '@fontsource-variable/figtree';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans:
+    'Figtree Variable', ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif:
+    'Lora Variable', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-mono:
+    'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  /* Spacing */
+  --default-radius: var(--radius-md);
+
+  /* Main accent color */
+  --accent-color: var(--color-blue-500);
+  --accent-text-color: var(--color-gray-100);
+
+  /* Default theme */
+  --background-color: var(--color-white);
+  --sub-color: var(--color-neutral-100);
+  --background-hover-color: var(--color-neutral-200);
+  --background-blockquote-color: var(--color-neutral-100);
+  --text-color: var(--color-black);
+  --anchor-color: var(--color-blue-600);
+  --anchor-hover-color: var(--color-blue-700);
+  --success-color: var(--color-green-700);
+  --warning-color: var(--color-orange-500);
+  --danger-color: var(--color-red-600);
+  --neutral-color: var(--color-neutral-300);
+
+  /* Dark theme */
+  --dark-background-color: var(--color-stone-800);
+  --dark-sub-color: var(--color-stone-900);
+  --dark-background-hover-color: var(--color-stone-600);
+  --dark-background-blockquote-color: var(--color-stone-700);
+  --dark-text-color: var(--color-stone-100);
+  --dark-anchor-color: var(--color-blue-500);
+  --dark-anchor-hover-color: var(--color-blue-600);
+  --dark-success-color: var(--color-emerald-700);
+  --dark-warning-color: var(--color-orange-600);
+  --dark-danger-color: var(--color-red-600);
+  --dark-neutral-color: var(--color-neutral-500);
+}
+
+@layer base {
+  body {
+    @apply bg-(--background-color) text-(--text-color) dark:bg-(--dark-background-color) dark:text-(--dark-text-color);
+    @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out;
+    @apply overflow-x-clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div,
+  button,
+  a {
+    @apply font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote {
+    @apply font-serif;
+  }
+
+  code,
+  pre {
+    @apply font-mono;
+  }
+
+  h6 {
+    @apply text-base italic;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+    @apply mt-1;
+  }
+
+  h2 {
+    @apply text-3xl;
+    @apply mt-2;
+  }
+
+  h1 {
+    @apply text-5xl;
+    @apply mt-4 mb-2;
+  }
+
+  button {
+    @apply m-1 cursor-pointer rounded-(--default-radius) bg-(--accent-color) p-1 text-(--accent-text-color) hover:brightness-90;
+  }
+
+  a {
+    @apply text-(--anchor-color) hover:text-(--anchor-hover-color) hover:underline dark:text-(--dark-anchor-color) dark:hover:text-(--dark-anchor-hover-color);
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  ul,
+  ol {
+    @apply pl-4;
+  }
+
+  main {
+    @apply mx-auto w-full p-[calc(var(--spacing)/2)];
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    blockquote {
+      @apply leading-relaxed text-wrap;
+    }
+
+    p {
+      @apply my-2;
+    }
+
+    pre {
+      @apply rounded-(--default-radius) p-2;
+      * {
+        @apply font-mono;
+      }
+    }
+  }
+
+  main.text-primary {
+    @apply md:w-2/3 lg:w-1/2;
+  }
+
+  blockquote {
+    @apply my-1 rounded-l-(--default-radius) border-l-4 bg-(--background-blockquote-color) py-1 pl-2 italic dark:bg-(--dark-background-blockquote-color);
+  }
+
+  .success {
+    @apply bg-(--success-color) dark:bg-(--dark-success-color);
+  }
+
+  .warning {
+    @apply bg-(--warning-color) dark:bg-(--dark-warning-color);
+  }
+
+  .danger {
+    @apply bg-(--danger-color) dark:bg-(--dark-danger-color);
+  }
+
+  .neutral {
+    @apply bg-(--neutral-color) text-black dark:bg-(--dark-neutral-color) dark:text-white;
+  }
+
+  .subtle {
+    @apply bg-(--background-color) text-(--text-color) hover:bg-(--background-hover-color) dark:bg-(--dark-background-color) dark:text-(--dark-text-color) dark:hover:bg-(--dark-background-hover-color);
+  }
+
+  img {
+    @apply m-1 aspect-auto w-full rounded-(--default-radius);
+  }
+}

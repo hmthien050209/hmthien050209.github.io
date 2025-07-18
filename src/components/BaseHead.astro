@@ -1,0 +1,111 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  imageName?: string;
+}
+
+const {
+  title = 'Home',
+  description = "This page doesn't have a description",
+  imageName = 'default-image.webp',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const formattedTitle = `${title} | hmthien050209's website`;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>{formattedTitle}</title>
+
+  <!-- Generator -->
+  <meta
+    name="generator"
+    content={Astro.generator}
+  />
+
+  <!-- Canonical URL -->
+  <link
+    rel="canonical"
+    href={canonicalURL}
+  />
+
+  <!-- Main meta -->
+  <meta
+    name="title"
+    content={formattedTitle}
+  />
+  <meta
+    name="description"
+    content={description}
+  />
+
+  <!-- OpenGraph -->
+  <meta
+    property="og:type"
+    content="website"
+  />
+  <meta
+    property="og:url"
+    content={Astro.url}
+  />
+  <meta
+    property="og:title"
+    content={formattedTitle}
+  />
+  <meta
+    property="og:description"
+    content={description}
+  />
+  <meta
+    property="og:image"
+    content={new URL(imageName, Astro.url)}
+  />
+
+  <!-- Twitter -->
+  <meta
+    property="twitter:card"
+    content="summary_large_image"
+  />
+  <meta
+    property="twitter:url"
+    content={Astro.url}
+  />
+  <meta
+    property="twitter:title"
+    content={title}
+  />
+  <meta
+    property="twitter:description"
+    content={description}
+  />
+  <meta
+    property="twitter:image"
+    content={new URL(imageName, Astro.url)}
+  />
+
+  <!-- Theme script-->
+  <!-- To prevent FOUC -->
+  <script is:inline>
+    const isDarkTheme = (() => {
+      if (
+        typeof localStorage !== 'undefined' &&
+        localStorage.getItem('isDarkMode')
+      ) {
+        return localStorage.getItem('isDarkMode');
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    })();
+
+    if (isDarkTheme === 'true') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
