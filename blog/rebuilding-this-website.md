@@ -4,8 +4,6 @@ description: Why did I choose to re-build this website from scratch instead of m
 date: 2025-07-18
 ---
 
-# Rebuilding this website
-
 ## Contents
 
 ## The challenges

@@ -31,5 +31,9 @@ const { Content } = await render(post);
   imageName={post.data.imageName}
   isTextPrimary={true}
 >
+  <h1>{post.data.title}</h1>
+  <p>
+    Posted on {post.data.date.toLocaleDateString()}
+  </p>
   <Content />
 </BaseLayout>
