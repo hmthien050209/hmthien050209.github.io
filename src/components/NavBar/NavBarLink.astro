@@ -1,5 +1,5 @@
 ---
-import { HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends HTMLAttributes<'a'> {}
 
@@ -14,8 +14,9 @@ const { ...attributes } = Astro.props;
 </a>
 
 <style>
+  @reference '@styles/main.css';
   a {
     all: unset;
-    @apply m-[--spacing] rounded-[--border-radius] p-[--spacing] text-inherit hover:cursor-pointer hover:bg-[--background-hover-color] hover:text-inherit hover:no-underline dark:text-inherit dark:hover:bg-[--dark-background-hover-color] dark:hover:text-inherit;
+    @apply m-1 rounded-(--default-radius) p-1 text-inherit hover:cursor-pointer hover:bg-(--background-hover-color) hover:text-inherit hover:no-underline md:m-2 md:p-2 dark:text-inherit dark:hover:bg-(--dark-background-hover-color) dark:hover:text-inherit;
   }
 </style>

@@ -1,10 +1,10 @@
 ---
 layout: ../layouts/BaseContentLayout.astro
-title: About
+title: Home
 ---
 
 > If you want a shorter, more professional version of this page, check out my
-> resume
+> résumé
 > via the navigation bar above.
 
 ## Contents
@@ -14,9 +14,8 @@ title: About
 I'm Hoàng Minh Thiên, a.k.a. hmthien050209 (or davidhoang05022009 in
 the past).
 
-I'm a student in the 2024 - 2027 Specialized Interdisciplinary Informatics class
-at VNU-HCM
-High School for the Gifted (PTNK), Vietnam.
+I'm a student in the 2024–2027 Specialized Interdisciplinary Informatics class
+at VNU-HCM High School for the Gifted (PTNK), Viet Nam.
 
 ## My skills
 
@@ -39,12 +38,12 @@ played with VMWare and Windows Server out of curiosity. After a year of messing
 around with others' software, I should try to write my software. The first
 programming language I learned was C, then C#, then Python, and many more.
 
-I was a self-taught developer back then, because my family is not programming
+I was a self-taught developer back then because my family is not programming
 related in any way.
 
 ### Junior high school
 
-When I was studying in grade 7, I learned about Linux, especially Fedora Linux.
+When I was studying in grade 7 (when the COVID-19 struck), I learned about Linux, especially Fedora Linux.
 I learned how to write
 a [post-install script](https://github.com/hmthien050209/fedora-post-install-script)
 to streamline the post-installation things (back then, I messed up my system a
@@ -63,7 +62,7 @@ to write mobile apps with Flutter, with the following noticeable projects:
   not completed yet 🙁
 
 In grade 8 and 9, I wrote some web games (mostly written with Vue) for use in my
-presentations, some of them are:
+presentations; some of them are:
 
 - [quiz-game](https://github.com/hmthien050209/quiz-game): the first version of
   cross-word + multiple choices game for use in my team's literature
@@ -84,11 +83,17 @@ Informatics classes to use. I also developed an online IDE
 called [PTNK IDE](https://ide.ptnkoj.com) to reduce our student's
 time-to-develop.
 
-> I plan to make PTNK IDE open source soon. For now, it's fragile and need
+> I plan to make PTNK IDE open source soon. For now, it's fragile and needs
 > heavy-refactoring (or even re-write from scratch).
+
+### At The Gifted Battlefield
+
+I'm also a member of The Gifted Battlefield, a non-profit organization of high schoolers specialized in educational
+activities. I'm a member of the Informatics Infrastructure Development (IID) Department, where I help building and
+maintaining web services serving the high school students in Viet Nam (especially in Ho Chi Minh City).
 
 ## About this website
 
 This website is created as a place to share my knowledge, to write things that
 randomly appear in my mind. I want to build a better world, and to do it, we
-need to share knowledge, so that we can improve every day!
+need to share knowledge so that we can improve every day!
