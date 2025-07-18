@@ -134,7 +134,7 @@
   }
 
   main {
-    @apply mx-auto w-full p-[calc(var(--spacing)/2)];
+    @apply mx-2 w-full p-[calc(var(--spacing)/2)] md:mx-auto;
 
     h1,
     h2,
