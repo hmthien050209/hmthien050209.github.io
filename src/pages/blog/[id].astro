@@ -27,12 +27,8 @@ const { Content } = await render(post);
 
 <BaseLayout
   title={post.data.title}
-  description={typeof post.data.description === 'string'
-    ? post.data.description
-    : undefined}
-  imageName={typeof post.data.imageName === 'string'
-    ? post.data.imageName
-    : undefined}
+  description={post.data.description}
+  imageName={post.data.imageName}
   isTextPrimary={true}
 >
   <Content />
