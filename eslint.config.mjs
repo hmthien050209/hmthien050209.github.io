@@ -15,8 +15,10 @@ export default [
     },
   },
   {
-    files: ['*.{js,ts,mjs,mts,cjs,html,css,astro}'],
     ignores: ['**/dist/*', '**/.astro/*'],
+  },
+  {
+    files: ['*.{js,ts,mjs,mts,cjs,html,css,astro}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
