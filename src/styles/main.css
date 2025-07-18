@@ -130,7 +130,7 @@
 
   ul,
   ol {
-    @apply pl-4;
+    @apply ps-4;
   }
 
   main {
@@ -162,10 +162,19 @@
 
   main.text-primary {
     @apply text-justify md:w-2/3 lg:w-1/2;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply text-start;
+    }
   }
 
   blockquote {
-    @apply my-1 rounded-(--default-radius) border-l-4 bg-(--background-blockquote-color) px-2 py-1 italic dark:bg-(--dark-background-blockquote-color);
+    @apply my-1 rounded-(--default-radius) border-s-4 bg-(--background-blockquote-color) px-2 py-1 italic dark:bg-(--dark-background-blockquote-color);
   }
 
   .success {
