@@ -4,6 +4,8 @@ title: My contact information
 description: "Hoàng Minh Thiên's contact information, where you can find me on various platforms."
 ---
 
+<div class="text-left">
+
 ## Facebook
 
 [Hoàng Minh Thiên](https://www.facebook.com/hmthien050209)
@@ -21,3 +23,5 @@ description: "Hoàng Minh Thiên's contact information, where you can find me on
 ## Discord
 
 hmthien050209
+
+</div>

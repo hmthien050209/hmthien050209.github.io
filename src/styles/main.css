@@ -16,42 +16,42 @@
     Consolas, 'Liberation Mono', 'Courier New', monospace;
 
   /* Spacing */
-  --default-radius: var(--radius-md);
+  --radius-default: var(--radius-md);
 
   /* Main accent color */
-  --accent-color: var(--color-blue-500);
-  --accent-text-color: var(--color-gray-100);
+  --color-accent: var(--color-blue-500);
+  --color-accent-text: var(--color-gray-100);
 
   /* Default theme */
-  --background-color: var(--color-stone-100);
-  --sub-color: var(--color-stone-200);
-  --background-hover-color: var(--color-stone-300);
-  --background-blockquote-color: var(--color-stone-200);
-  --text-color: var(--color-stone-900);
-  --anchor-color: var(--color-blue-600);
-  --anchor-hover-color: var(--color-blue-700);
-  --success-color: var(--color-green-700);
-  --warning-color: var(--color-orange-500);
-  --danger-color: var(--color-red-600);
-  --neutral-color: var(--color-neutral-300);
+  --color-background: var(--color-stone-100);
+  --color-sub: var(--color-stone-200);
+  --color-background-hover: var(--color-stone-300);
+  --color-background-blockquote: var(--color-stone-200);
+  --color-text: var(--color-stone-900);
+  --color-anchor: var(--color-blue-600);
+  --color-anchor-hover: var(--color-blue-700);
+  --color-success: var(--color-green-700);
+  --color-warning: var(--color-orange-500);
+  --color-danger: var(--color-red-600);
+  --color-neutral: var(--color-neutral-300);
 
   /* Dark theme */
-  --dark-background-color: var(--color-stone-800);
-  --dark-sub-color: var(--color-stone-900);
-  --dark-background-hover-color: var(--color-stone-600);
-  --dark-background-blockquote-color: var(--color-stone-700);
-  --dark-text-color: var(--color-stone-100);
-  --dark-anchor-color: var(--color-blue-400);
-  --dark-anchor-hover-color: var(--color-blue-300);
-  --dark-success-color: var(--color-emerald-700);
-  --dark-warning-color: var(--color-orange-600);
-  --dark-danger-color: var(--color-red-600);
-  --dark-neutral-color: var(--color-neutral-500);
+  --color-dark-background: var(--color-stone-800);
+  --color-dark-sub: var(--color-stone-900);
+  --color-dark-background-hover: var(--color-stone-600);
+  --color-dark-background-blockquote: var(--color-stone-700);
+  --color-dark-text: var(--color-stone-100);
+  --color-dark-anchor: var(--color-blue-400);
+  --color-dark-anchor-hover: var(--color-blue-300);
+  --color-dark-success: var(--color-emerald-700);
+  --color-dark-warning: var(--color-orange-600);
+  --color-dark-danger: var(--color-red-600);
+  --color-dark-neutral: var(--color-neutral-500);
 }
 
 @layer base {
   body {
-    @apply bg-(--background-color) text-(--text-color) dark:bg-(--dark-background-color) dark:text-(--dark-text-color);
+    @apply bg-background text-text dark:bg-dark-background dark:text-dark-text;
     @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out;
     @apply overflow-x-hidden;
   }
@@ -113,11 +113,11 @@
   }
 
   button {
-    @apply m-1 cursor-pointer rounded-(--default-radius) bg-(--accent-color) p-1 text-(--accent-text-color) hover:brightness-90;
+    @apply rounded-default bg-accent text-accent-text m-1 cursor-pointer p-1 hover:brightness-90;
   }
 
   a {
-    @apply text-(--anchor-color) hover:text-(--anchor-hover-color) hover:underline dark:text-(--dark-anchor-color) dark:hover:text-(--dark-anchor-hover-color);
+    @apply text-anchor hover:text-anchor-hover dark:text-dark-anchor dark:hover:text-dark-anchor-hover hover:underline;
   }
 
   ul {
@@ -134,7 +134,7 @@
   }
 
   main {
-    @apply mx-2 w-full p-[calc(var(--spacing)/2)] md:mx-auto;
+    @apply w-full p-4 md:mx-auto md:w-full md:p-0;
 
     h1,
     h2,
@@ -153,7 +153,8 @@
     }
 
     pre {
-      @apply rounded-(--default-radius) p-2;
+      @apply rounded-default p-2;
+
       * {
         @apply font-mono;
       }
@@ -174,30 +175,30 @@
   }
 
   blockquote {
-    @apply my-1 rounded-(--default-radius) border-s-4 bg-(--background-blockquote-color) px-2 py-1 italic dark:bg-(--dark-background-blockquote-color);
+    @apply rounded-default bg-background-blockquote dark:bg-dark-background-blockquote my-1 border-s-4 px-2 py-1 italic;
   }
 
   .success {
-    @apply bg-(--success-color) dark:bg-(--dark-success-color);
+    @apply bg-success dark:bg-dark-success;
   }
 
   .warning {
-    @apply bg-(--warning-color) dark:bg-(--dark-warning-color);
+    @apply bg-warning dark:bg-dark-warning;
   }
 
   .danger {
-    @apply bg-(--danger-color) dark:bg-(--dark-danger-color);
+    @apply bg-danger dark:bg-dark-danger;
   }
 
   .neutral {
-    @apply bg-(--neutral-color) text-black dark:bg-(--dark-neutral-color) dark:text-white;
+    @apply bg-neutral dark:bg-dark-neutral text-black dark:text-white;
   }
 
   .subtle {
-    @apply bg-(--background-color) text-(--text-color) hover:bg-(--background-hover-color) dark:bg-(--dark-background-color) dark:text-(--dark-text-color) dark:hover:bg-(--dark-background-hover-color);
+    @apply bg-background text-text hover:bg-background-hover dark:bg-dark-background dark:text-dark-text dark:hover:bg-dark-background-hover;
   }
 
   img {
-    @apply m-1 aspect-auto w-full rounded-(--default-radius);
+    @apply rounded-default m-1 aspect-auto w-full;
   }
 }

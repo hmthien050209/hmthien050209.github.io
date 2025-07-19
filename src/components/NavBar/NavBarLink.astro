@@ -17,6 +17,6 @@ const { ...attributes } = Astro.props;
   @reference '@styles/main.css';
   a {
     all: unset;
-    @apply m-1 rounded-(--default-radius) p-1 text-inherit hover:cursor-pointer hover:bg-(--background-hover-color) hover:text-inherit hover:no-underline md:m-2 md:p-2 dark:text-inherit dark:hover:bg-(--dark-background-hover-color) dark:hover:text-inherit;
+    @apply rounded-default hover:bg-background-hover dark:hover:bg-dark-background-hover m-1 p-1 text-inherit hover:cursor-pointer hover:text-inherit hover:no-underline md:m-2 md:p-2 dark:text-inherit dark:hover:text-inherit;
   }
 </style>
