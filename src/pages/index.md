@@ -90,7 +90,7 @@ time-to-develop.
 ### At The Gifted Battlefield
 
 I'm also a member of The Gifted Battlefield, a non-profit organization of high schoolers specialized in educational
-activities. I'm a member of the Informatics Infrastructure Development (IID) Department, where I help building and
+activities. I'm the Head of the Informatics Infrastructure Development (IID) Department, where I help building and
 maintaining web services serving the high school students in Viet Nam (especially in Ho Chi Minh City).
 
 ## About this website
