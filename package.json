@@ -29,7 +29,7 @@
     "@fortawesome/vue-fontawesome": "^3.1.2",
     "@tailwindcss/vite": "^4.1.17",
     "@vueuse/core": "^12.8.2",
-    "astro": "^5.15.8",
+    "astro": "^5.15.9",
     "shiki": "^3.15.0",
     "tailwindcss": "^4.1.17",
     "vue": "^3.5.24"
