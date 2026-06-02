@@ -3,7 +3,8 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import remarkToc from 'remark-toc';
 import vue from '@astrojs/vue';
-import sitemap from '@astrojs/sitemap'
+import sitemap from '@astrojs/sitemap';
+import { unified } from '@astrojs/markdown-remark';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,10 +12,10 @@ export default defineConfig({
   site: 'https://hmthien050209.github.io/',
   prefetch: true,
   markdown: {
-    remarkPlugins: [
-      [remarkToc, { heading: 'Contents', ordered: true, tight: false }],
-    ],
-    rehypePlugins: [rehypeAccessibleEmojis],
+    processor: unified({
+      remarkPlugins: [[remarkToc, { heading: 'Contents', ordered: true, tight: false }]],
+      rehypePlugins: [rehypeAccessibleEmojis],
+    }),
     shikiConfig: {
       theme: 'vitesse-dark',
     },

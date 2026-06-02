@@ -24,7 +24,7 @@ const posts = await getCollection('blog');
       posts.map((post) => (
         <PostCard
           title={post.data.title}
-          description={post.data.description}
+          description={post.data.description || ''}
           imageName={post.data.imageName ?? 'default-image.png'}
           date={post.data.date}
           url={`/blog/${post.id}`}
