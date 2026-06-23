@@ -1,9 +1,9 @@
 ---
-import NavBar from '../components/NavBar/NavBar.astro';
-import Footer from '../components/Footer.astro';
+import NavBar from "../components/NavBar/NavBar.astro";
+import Footer from "../components/Footer.astro";
 
-import '../styles/main.css';
-import BaseHead from '../components/BaseHead.astro';
+import "../styles/global.css";
+import BaseHead from "../components/BaseHead.astro";
 
 interface Props {
   title?: string;
@@ -13,7 +13,7 @@ interface Props {
 }
 
 const {
-  title = 'Home',
+  title = "Home",
   description,
   imageName,
   isTextPrimary = true,
@@ -23,12 +23,12 @@ const {
 <html lang="en">
   <BaseHead
     title={title}
-    description={description || ''}
-    imageName={imageName || 'default-image.png'}
+    description={description || ""}
+    imageName={imageName || "default-image.png"}
   />
   <NavBar />
   <body>
-    <main class={isTextPrimary ? 'text-primary' : ''}>
+    <main class={isTextPrimary ? "text-primary" : ""}>
       <slot />
     </main>
   </body><Footer />

@@ -7,13 +7,12 @@
 
 @theme {
   --font-sans:
-    'Figtree Variable', ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-serif:
-    'Lora Variable', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    'Figtree Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif: 'Lora Variable', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --font-mono:
-    'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, 'Liberation Mono', 'Courier New', monospace;
+    'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
 
   /* Spacing */
   --radius-default: var(--radius-md);
@@ -23,11 +22,11 @@
   --color-accent-text: var(--color-gray-100);
 
   /* Default theme */
-  --color-background: var(--color-stone-100);
-  --color-sub: var(--color-stone-200);
-  --color-background-hover: var(--color-stone-300);
-  --color-background-blockquote: var(--color-stone-200);
-  --color-text: var(--color-stone-900);
+  --color-background: var(--color-zinc-100);
+  --color-sub: var(--color-zinc-200);
+  --color-background-hover: var(--color-zinc-300);
+  --color-background-blockquote: var(--color-zinc-200);
+  --color-text: var(--color-zinc-900);
   --color-anchor: var(--color-blue-600);
   --color-anchor-hover: var(--color-blue-700);
   --color-success: var(--color-green-700);
@@ -36,11 +35,11 @@
   --color-neutral: var(--color-neutral-300);
 
   /* Dark theme */
-  --color-dark-background: var(--color-stone-800);
-  --color-dark-sub: var(--color-stone-900);
-  --color-dark-background-hover: var(--color-stone-600);
-  --color-dark-background-blockquote: var(--color-stone-700);
-  --color-dark-text: var(--color-stone-100);
+  --color-dark-background: var(--color-zinc-900);
+  --color-dark-sub: var(--color-zinc-800);
+  --color-dark-background-hover: var(--color-zinc-600);
+  --color-dark-background-blockquote: var(--color-zinc-700);
+  --color-dark-text: var(--color-zinc-100);
   --color-dark-anchor: var(--color-blue-400);
   --color-dark-anchor-hover: var(--color-blue-300);
   --color-dark-success: var(--color-emerald-700);

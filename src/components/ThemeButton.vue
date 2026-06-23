@@ -45,7 +45,7 @@
 </template>
 
 <style scoped>
-  @reference '@styles/main.css';
+  @reference '@styles/global.css';
   * {
     @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out;
   }

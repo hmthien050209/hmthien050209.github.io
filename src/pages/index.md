@@ -12,7 +12,7 @@ description: "Hoàng Minh Thiên's personal website, where I share my knowledge 
 
 ## Hi there!
 
-I'm Hoàng Minh Thiên, a.k.a. hmthien050209 (or davidhoang05022009 in
+I'm Hoàng Minh Thiên, a.k.a. `hmthien050209` (or `davidhoang05022009` in the past).
 the past).
 
 I'm a student in the 2024–2027 Specialized Interdisciplinary Informatics class
@@ -20,14 +20,13 @@ at VNU-HCM High School for the Gifted (PTNK), Viet Nam.
 
 ## My skills
 
-- C/C++ (intermediate)
-- C# (WPF MVVM, ASP.NET)
+- C/C++, x86_64 Assembly
+- C#: WPF MVVM, Avalonia, ASP.NET
 - Go
 - Flutter
-- Web development (most familiar with Vue + TailwindCSS or Astro, but I can use
-  Angular and React also)
-- Python, Bash (mostly for automating tasks on server environments)
-- Linux (intermediate)
+- Web development: pretty much any framework, but I mostly work with Astro, Vue, React.
+- Python, Bash: mostly for automating tasks on server environments
+- Linux
 - Docker
 
 ## My history
