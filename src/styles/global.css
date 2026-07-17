@@ -51,7 +51,7 @@
 @layer base {
   body {
     @apply bg-background text-text dark:bg-dark-background dark:text-dark-text;
-    @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out;
+    @apply motion-safe:transition-all motion-safe:duration-150 motion-safe:ease-out;
     @apply overflow-x-hidden;
     @apply font-sans;
   }
@@ -137,7 +137,7 @@
     blockquote {
       @apply leading-relaxed text-wrap;
 
-      &:not(blockquote) {
+      &:where(:not(blockquote, blockquote *)) {
         @apply mt-[0.5lh];
       }
     }

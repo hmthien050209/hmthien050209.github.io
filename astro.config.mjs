@@ -2,7 +2,6 @@ import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import remarkToc from 'remark-toc';
-import vue from '@astrojs/vue';
 import sitemap from '@astrojs/sitemap';
 import { unified } from '@astrojs/markdown-remark';
 import { fileURLToPath } from 'node:url';
@@ -10,10 +9,11 @@ import * as fs from 'node:fs';
 import astroTakumi from 'astro-takumi';
 import { ogImage } from './src/og-image.tsx';
 
+import preact from '@astrojs/preact';
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    vue(),
     sitemap(),
     astroTakumi({
       options: {
@@ -29,6 +29,7 @@ export default defineConfig({
       },
       render: ogImage,
     }),
+    preact(),
   ],
   site: 'https://hmthien050209.github.io/',
   prefetch: true,

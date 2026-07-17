@@ -19,23 +19,20 @@
   "dependencies": {
     "@astrojs/check": "^0.9.9",
     "@astrojs/markdown-remark": "^7.2.1",
+    "@astrojs/preact": "^6.0.1",
     "@astrojs/sitemap": "^3.7.3",
-    "@astrojs/vue": "^7.0.1",
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/lora": "^5.2.8",
     "@fontsource-variable/noto-sans-display": "^5.2.10",
-    "@fortawesome/free-brands-svg-icons": "^7.3.1",
-    "@fortawesome/free-regular-svg-icons": "^7.3.1",
-    "@fortawesome/free-solid-svg-icons": "^7.3.1",
-    "@fortawesome/vue-fontawesome": "^3.3.2",
+    "@preact/signals": "^2.9.4",
     "@tailwindcss/vite": "^4.3.3",
-    "@vueuse/core": "^14.3.0",
     "astro": "^7.1.0",
     "astro-takumi": "^2.0.1",
+    "lucide-preact": "^1.24.0",
+    "preact": "^10.29.7",
     "shiki": "^4.3.1",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3",
-    "vue": "^3.5.40"
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
