@@ -1,14 +1,14 @@
 @import 'tailwindcss';
+@import '@fontsource-variable/noto-sans-display';
+@import '@fontsource-variable/lora/wght-italic';
 @import '@fontsource-variable/jetbrains-mono';
-@import '@fontsource-variable/lora';
-@import '@fontsource-variable/figtree';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
   --font-sans:
-    'Figtree Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+    'Noto Sans Display Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-serif: 'Lora Variable', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --font-mono:
     'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -53,19 +53,6 @@
     @apply bg-background text-text dark:bg-dark-background dark:text-dark-text;
     @apply motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out;
     @apply overflow-x-hidden;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span,
-  div,
-  button,
-  a {
     @apply font-sans;
   }
 
@@ -74,7 +61,12 @@
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+    font-variation-settings:
+      'wght' 500,
+      'wdth' 87.5;
+  }
+
   blockquote {
     @apply font-serif;
   }
@@ -103,12 +95,11 @@
 
   h2 {
     @apply text-3xl;
-    @apply mt-2;
   }
 
   h1 {
     @apply text-5xl;
-    @apply mt-4 mb-2;
+    @apply mb-2;
   }
 
   button {
@@ -145,6 +136,7 @@
     span,
     blockquote {
       @apply leading-relaxed text-wrap;
+      @apply mt-[1lh]!;
     }
 
     p {
@@ -174,7 +166,7 @@
   }
 
   blockquote {
-    @apply rounded-default bg-background-blockquote dark:bg-dark-background-blockquote my-1 border-s-4 px-2 py-1 italic;
+    @apply rounded-default bg-background-blockquote dark:bg-dark-background-blockquote my-1 border-s-2 px-3 py-1 italic;
   }
 
   .success {
