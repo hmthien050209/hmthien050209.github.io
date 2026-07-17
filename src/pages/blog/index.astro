@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/Blogs/PostCard.astro';
 import CardsContainer from '../../components/Blogs/CardsContainer.astro';
 import { getCollection } from 'astro:content';
+import { getImagePath } from 'astro-takumi/dist/util.js';
 
 const posts = await getCollection('blog');
 ---
@@ -25,9 +26,14 @@ const posts = await getCollection('blog');
         <PostCard
           title={post.data.title}
           description={post.data.description || ''}
-          imageName={post.data.imageName ?? 'default-image.png'}
           date={post.data.date}
           url={`/blog/${post.id}`}
+          ogImageUrl={getImagePath({
+            url: new URL(`/blog/${post.id}/`, Astro.site),
+            site: Astro.site,
+            format: 'webp',
+          })}
+          {...(post.data.imageName ? { imageName: post.data.imageName } : {})}
         />
       ))
     }

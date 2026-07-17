@@ -1,18 +1,19 @@
 ---
+import { getImagePath } from 'astro-takumi/dist/util.js';
+
 interface Props {
   title?: string;
   description?: string;
-  imageName?: string;
 }
 
 const {
   title = 'Home',
   description = "This page doesn't have a description",
-  imageName = 'default-image.webp',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const formattedTitle = `${title} | hmthien050209's website`;
+const ogImageUrl = getImagePath({ url: Astro.url, site: Astro.site, format: 'webp' });
 ---
 
 <head>
@@ -71,32 +72,14 @@ const formattedTitle = `${title} | hmthien050209's website`;
     property="og:description"
     content={description}
   />
-  <meta
-    property="og:image"
-    content={new URL(imageName, Astro.url)}
-  />
+  <meta property="og:image" content={ogImageUrl} />
 
   <!-- Twitter -->
-  <meta
-    property="twitter:card"
-    content="summary_large_image"
-  />
-  <meta
-    property="twitter:url"
-    content={Astro.url}
-  />
-  <meta
-    property="twitter:title"
-    content={title}
-  />
-  <meta
-    property="twitter:description"
-    content={description}
-  />
-  <meta
-    property="twitter:image"
-    content={new URL(imageName, Astro.url)}
-  />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={Astro.url} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={ogImageUrl} />
 
   <!-- Theme script-->
   <!-- To prevent FOUC -->

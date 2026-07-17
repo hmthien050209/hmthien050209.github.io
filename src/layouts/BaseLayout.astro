@@ -8,14 +8,12 @@ import BaseHead from "../components/BaseHead.astro";
 interface Props {
   title?: string;
   description?: string;
-  imageName?: string;
   isTextPrimary?: boolean;
 }
 
 const {
   title = "Home",
   description,
-  imageName,
   isTextPrimary = true,
 } = Astro.props;
 ---
@@ -24,7 +22,6 @@ const {
   <BaseHead
     title={title}
     description={description || ""}
-    imageName={imageName || "default-image.png"}
   />
   <NavBar />
   <body>

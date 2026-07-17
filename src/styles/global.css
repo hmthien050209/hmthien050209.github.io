@@ -136,7 +136,10 @@
     span,
     blockquote {
       @apply leading-relaxed text-wrap;
-      @apply mt-[1lh]!;
+
+      &:not(blockquote) {
+        @apply mt-[0.5lh];
+      }
     }
 
     p {

@@ -6,10 +6,30 @@ import vue from '@astrojs/vue';
 import sitemap from '@astrojs/sitemap';
 import { unified } from '@astrojs/markdown-remark';
 import { fileURLToPath } from 'node:url';
+import * as fs from 'node:fs';
+import astroTakumi from 'astro-takumi';
+import { ogImage } from './src/og-image.tsx';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), sitemap()],
+  integrations: [
+    vue(),
+    sitemap(),
+    astroTakumi({
+      options: {
+        format: 'webp',
+        fonts: [
+          fs.readFileSync(
+            fileURLToPath(
+              import.meta
+                .resolve('@fontsource-variable/noto-sans-display/files/noto-sans-display-latin-wght-normal.woff2'),
+            ),
+          ),
+        ],
+      },
+      render: ogImage,
+    }),
+  ],
   site: 'https://hmthien050209.github.io/',
   prefetch: true,
   markdown: {
