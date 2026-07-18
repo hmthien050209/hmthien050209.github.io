@@ -13,6 +13,7 @@ export async function ogImage({ title, description }: RenderFunctionInput) {
         padding: '60px 80px',
         color: 'oklch(96.7% 0.001 286.375)',
         fontFamily: 'Noto Sans Display Variable',
+        fontVariationSettings: "'wght': 500, 'wdth': 87.5"
       }}
     >
       <div

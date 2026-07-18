@@ -31,11 +31,7 @@ if (imageName) {
 ---
 
 <a href={url} data-astro-prefetch>
-  {
-    imageSrc && (
-      <img src={imageSrc} alt={`Hero image for post "${title}"`} />
-    )
-  }
+  {imageSrc && <img src={imageSrc} alt={`Hero image for post "${title}"`} />}
   <div class="post-details">
     <h3>{title}</h3>
     <p class="line-clamp-2">{description}</p>
@@ -55,7 +51,7 @@ if (imageName) {
   }
 
   img {
-    @apply h-full w-full rounded-[calc(var(--radius-xl)-var(--spacing)*2)] object-cover m-0;
+    @apply h-full w-full rounded-[calc(var(--radius-xl)-var(--spacing)*2)] object-contain m-0;
   }
 
   .post-details,
