@@ -1,29 +1,9 @@
-import { signal } from '@preact/signals';
-import { useEffect } from 'preact/hooks';
-import { Moon, Sun } from 'lucide-preact';
-
-const isDarkMode = signal(false);
-
-function applyTheme(isDark: boolean) {
-  document.documentElement.classList.toggle('dark', isDark);
-}
+import { Moon, Sun } from 'lucide-solid';
 
 export default function ThemeButton() {
-  useEffect(() => {
-    const stored = localStorage.getItem('isDarkMode');
-    const initial =
-      stored !== null
-        ? stored === 'true'
-        : window.matchMedia('(prefers-color-scheme: dark)').matches;
-    isDarkMode.value = initial;
-    applyTheme(initial);
-  }, []);
-
   const toggleTheme = () => {
-    const next = !isDarkMode.value;
-    localStorage.setItem('isDarkMode', String(next));
-    isDarkMode.value = next;
-    applyTheme(next);
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('isDarkMode', String(isDark));
   };
 
   return (
@@ -32,11 +12,8 @@ export default function ThemeButton() {
       aria-label="Toggle theme"
       onClick={toggleTheme}
     >
-      {isDarkMode.value ? (
-        <Moon class="h-full w-full group-active:filter-[blur(2px)]" />
-      ) : (
-        <Sun class="h-full w-full group-active:filter-[blur(2px)]" />
-      )}
+      <Sun class="h-full w-full group-active:filter-[blur(2px)] dark:hidden" />
+      <Moon class="hidden h-full w-full group-active:filter-[blur(2px)] dark:block" />
     </button>
   );
 }

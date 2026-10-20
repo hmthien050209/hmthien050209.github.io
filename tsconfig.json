@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
@@ -11,6 +11,6 @@
       "@styles/*": ["./src/styles/*"],
       "@assets/*": ["./src/assets/*"]
     },
-    "jsxImportSource": "preact"
+    "jsxImportSource": "solid-js"
   }
 }

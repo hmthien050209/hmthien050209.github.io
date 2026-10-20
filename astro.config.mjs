@@ -7,9 +7,9 @@ import { unified } from '@astrojs/markdown-remark';
 import { fileURLToPath } from 'node:url';
 import * as fs from 'node:fs';
 import astroTakumi from 'astro-takumi';
-import { ogImage } from './src/og-image.tsx';
+import { ogImage } from './src/og-image.ts';
 
-import preact from '@astrojs/preact';
+import solid from '@astrojs/solid-js';
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,9 +29,12 @@ export default defineConfig({
       },
       render: ogImage,
     }),
-    preact(),
+    solid(),
   ],
   site: 'https://hmthien050209.github.io/',
+  build: {
+    inlineStylesheets: 'always',
+  },
   prefetch: true,
   markdown: {
     processor: unified({

@@ -18,7 +18,7 @@ import NavBarLink from "./NavBarLink.astro";
       <NavBarLink href="/resume.pdf" data-astro-prefetch>Résumé</NavBarLink>
       <!-- To prevent layout shifts-->
       <div class="flex h-12 w-12 grow items-center justify-end">
-        <ThemeButton client:only="preact" />
+        <ThemeButton client:load />
       </div>
     </div>
   </div>

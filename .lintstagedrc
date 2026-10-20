@@ -1,4 +1,7 @@
 {
-  "*.{js,ts,mjs,mts,cjs,html,astro,vue}": ["oxlint --fix", "oxfmt --no-error-on-unmatched-pattern"],
+  "*.{js,ts,mjs,mts,cjs,html,astro,jsx,tsx}": [
+    "oxlint --fix",
+    "oxfmt --no-error-on-unmatched-pattern"
+  ],
   "*.{css,md,json}": ["oxfmt"]
 }

@@ -84,20 +84,19 @@ const ogImageUrl = getImagePath({ url: Astro.url, site: Astro.site, format: 'web
   <!-- Theme script-->
   <!-- To prevent FOUC -->
   <script is:inline>
-    const isDarkTheme = (() => {
-      if (
-        typeof localStorage !== 'undefined' &&
-        localStorage.getItem('isDarkMode')
-      ) {
+    const storedTheme = (() => {
+      try {
         return localStorage.getItem('isDarkMode');
+      } catch {
+        return null;
       }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
     })();
 
-    if (isDarkTheme === 'true') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    const isDarkTheme =
+      storedTheme !== null
+        ? storedTheme === 'true'
+        : window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    document.documentElement.classList.toggle('dark', isDarkTheme);
   </script>
 </head>

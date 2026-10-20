@@ -1,6 +1,5 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "vueIndentScriptAndStyle": true,
   "singleAttributePerLine": true,
   "semi": true,
   "singleQuote": true,
