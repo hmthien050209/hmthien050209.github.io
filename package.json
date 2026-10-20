@@ -23,7 +23,7 @@
     "@astrojs/sitemap": "^3.7.4",
     "@fontsource-variable/jetbrains-mono": "^5.3.0",
     "@fontsource-variable/noto-sans-display": "^5.3.0",
-    "@fontsource/crimson-text": "^5.3.0",
+    "@fontsource-variable/stix-two-text": "^5.3.0",
     "@preact/signals": "^2.11.3",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.4.0",

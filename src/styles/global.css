@@ -3,12 +3,8 @@
 @import '@fontsource-variable/noto-sans-display/wght-italic.css';
 @import '@fontsource-variable/noto-sans-display/wdth.css';
 @import '@fontsource-variable/noto-sans-display/wdth-italic.css';
-@import '@fontsource/crimson-text/400.css';
-@import '@fontsource/crimson-text/400-italic.css';
-@import '@fontsource/crimson-text/600.css';
-@import '@fontsource/crimson-text/600-italic.css';
-@import '@fontsource/crimson-text/700.css';
-@import '@fontsource/crimson-text/700-italic.css';
+@import '@fontsource-variable/stix-two-text/wght.css';
+@import '@fontsource-variable/stix-two-text/wght-italic.css';
 @import '@fontsource-variable/jetbrains-mono/wght.css';
 @import '@fontsource-variable/jetbrains-mono/wght-italic.css';
 
@@ -18,7 +14,8 @@
   --font-sans:
     'Noto Sans Display Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-serif: 'Lora Variable', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-serif:
+    'STIX Two Text Variable', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --font-mono:
     'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;

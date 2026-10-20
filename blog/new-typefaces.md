@@ -38,3 +38,5 @@ I'm very passionate in programming, but also in designing. From a small typeface
 That's it, thank you for reading!
 
 _(I haven't written for a while, sorry for bad wordings or silly mistakes. If there is any, please contact me!)_
+
+**Update**: Lora has been replaced by STIX Two Text after a long finding of fonts.
