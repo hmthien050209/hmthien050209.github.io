@@ -13,7 +13,6 @@ description: "Hoàng Minh Thiên's personal website, where I share my knowledge 
 ## Hi there!
 
 I'm Hoàng Minh Thiên, a.k.a. `hmthien050209` (or `davidhoang05022009` in the past).
-the past).
 
 I'm a student in the 2024–2027 Specialized Interdisciplinary Informatics class
 at VNU-HCM High School for the Gifted (PTNK), Viet Nam.
