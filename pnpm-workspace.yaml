@@ -9,3 +9,8 @@ onlyBuiltDependencies:
   - '@tailwindcss/oxide'
   - esbuild
   - sharp
+autoDedupe: true
+lockfile:
+  includeResolutionSettings: true
+update:
+  githubActions: true
